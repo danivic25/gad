@@ -1,0 +1,50 @@
+/*Redimensionar los iconos de idioma de la barra lateral*/
+.ico-idioma {
+    width: 40px;
+    height: 40px;
+}
+
+/*Color de los iconos */
+a.boton{
+	color: white;
+}
+
+a.boton:hover {
+	text-decoration: none;
+	color: white;
+}
+
+.icon-edit {
+	text-decoration: none;
+	color: black;
+}
+
+a.icon-editT {
+	text-decoration: none;
+	color: blue;
+}
+
+a.icon-plan {
+	text-decoration: none;
+	color: blue;
+}
+
+.icon-alert {
+	text-decoration: none;
+	color: orange;
+}
+
+.icon-plus {
+	text-decoration: none;
+	color: green;
+}
+
+a.icon-trash {
+	text-decoration: none;
+	color: red;
+}
+
+.icon-alert {
+	text-decoration: none;
+	color: orange;
+}
