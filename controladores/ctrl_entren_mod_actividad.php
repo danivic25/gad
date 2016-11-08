@@ -24,7 +24,7 @@ $entrenador_dni = $_POST['entrenador_dni'];
 $nuevaAct = new Actividad ($idactividad, $nombreactividad, $horainicio, $horafin, $responsable, $tipoactividad, $numplazasmax, $numplazasmax, $idsesion, $usuario_dni, $entrenador_dni);   /*CAMBIAAAAAAR*/
 
 //Modificar la actividad
-if ($nuevaAct->crear($nuevaAct))
+if ($nuevaAct->modificar($nuevaAct))
     header('Location:../vistas/e_menu.php');
 else
     die("Error al crear la actividad". $idactividad);

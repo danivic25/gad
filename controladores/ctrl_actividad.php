@@ -6,7 +6,7 @@ Fecha: 01/11/2016
 ============================================================================
 -->
 <?php
-    include_once "../modelo/model_actividad_entr.php";
+    include_once "../modelo/model_actividad_entren.php";
 
     //Conectar con el modelo de Actividad
     $actividades = new Actividad();

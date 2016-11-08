@@ -17,12 +17,12 @@ class Actividad implements iModel {
     private $responsable;
     private $tipoactividad;
 		private $numplazasmax;
-		private $sesionEntrenamiento_idSesion;
+		private $idsesion;
 		private $usuario_dni;
 		private $entrenador_dni;
 
     public function __construct($idactividad="" , $nombreactividad="", $horainicio="" , $horafin="" , $responsable="",
-		$tipoactividad="", $numplazasmax="", $idsesion="", $usuario_dni="", $entrenador_dni="", $idioma="esp") {
+		$tipoactividad="", $numplazasmax="", $idsesion="", $usuario_dni="", $entrenador_dni="") {
 
 				$this->idactividad = $idactividad;
         $this->nombreactividad = $nombreactividad;
@@ -199,21 +199,6 @@ class Actividad implements iModel {
         $db->desconectar();
         return $arrayActividad;
     }
-
-		/*
-    //Devuelve un array asociativo de la tabla de la clase de los usuarios empleados
-    public function listarEmpleados(){
-        $db = new Database();
-
-        $result = $db->consulta("SELECT * FROM Usuario WHERE tipousuario='empleado'");
-        $arrayEmpleados = array();
-        while ($row_usuario = mysqli_fetch_assoc($result))
-            $arrayEmpleados[] = $row_usuario;
-
-        $db->desconectar();
-        return $arrayEmpleados;
-    }
-		*/
 
     //Muestra los datos de la $pk indicada. Devuelve una array asociativo
     public function consultar ($idactividad, $idsesion, $entrenador_dni){
