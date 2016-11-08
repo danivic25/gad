@@ -10,20 +10,16 @@ include_once 'interface.php';
 
 class ejercicio implements iModel {
 
-    private $idejercio;
+    private $idejercicio;
     private $nombreejercicio;
     private $tipoejercicio;
     private $niveldificultad;
-    private $anotaciones;
-    private $TablaEjercicios_idtabla;
     
-    public function __construct($idejercicio="" , $nombreejercicio="", $tipoejercicio="" , $niveldificultad="" , $anotaciones="esp", $TablaEjercicios_idtabla="") {
+    public function __construct($idejercicio="" , $nombreejercicio="", $tipoejercicio="" , $niveldificultad="") {
         $this->idejercicio = $idejercicio;
         $this->nombreejercicio = $nombreejercicio;
         $this->tipoejercicio = $tipoejercicio;
         $this->niveldificultad = $niveldificultad;
-        $this->anotaciones = $anotaciones;
-        $this->TablaEjercicios_idtabla = $TablaEjercicios_idtabla;
     }
     
     private function getnombreejercicio ($pk){
@@ -60,23 +56,6 @@ class ejercicio implements iModel {
         return $tipoejercicio;
     }
     
-    public function getTablaEjercicios_idtabla ($pk){
-        $db = new Database();
-        
-        $query = 'SELECT TablaEjercicios_idtabla FROM Ejercicio WHERE idejercicio = \'' . $pk .  '\'';
-        $result = $db->consulta($query);
-
-        /* array numérico */
-        $row = $result->fetch_array(MYSQLI_NUM);
-        $TablaEjercicios_idtabla = $row[0];
-
-        /* liberar la serie de resultados */
-        $result->free();
-        $db->desconectar();
-        
-        return $TablaEjercicios_idtabla;
-    }
-    
     public function getniveldificultad ($pk){
         $db = new Database();
         
@@ -106,16 +85,6 @@ class ejercicio implements iModel {
         }else return true;
     }
     
-		//Este metodo se llama cada vez que se cambia el anotaciones en la navBar lateral
-		//Devuelve true si se realizo correctamente el cambio de anotaciones
-    public function setanotaciones ($newanotaciones, $pk){
-			$db = new Database();
-			$sql = 'UPDATE Ejercicio SET anotaciones = \'' .$newanotaciones. '\' WHERE Ejercicio.idejercicio = \'' .  $pk .  '\'';
-			$resultado = $db->consulta($sql) or die('Error al ejecutar la consulta de modificar anotaciones');
-			$db->desconectar();
-
-			return $resultado;
-    }
     
     //Comprueba si existe
     public function exists ($pk) {
@@ -156,11 +125,8 @@ class ejercicio implements iModel {
         $ejertipoejercicio = $this->gettipoejercicio($pk);
         //Obtener niveldificultad
         $ejerniveldificultad = $this->getniveldificultad($pk);
-        //Obtener TablaEjercicios_idtabla de Ejercicio
-        $ejerTablaEjercicios_idtabla = $this->getTablaEjercicios_idtabla($pk);
-        
         //Crear array asoc con los datos de $pk
-        $Ejercicio = array("idejercicio"=>$pk, "nombreejercicio"=>$ejernombreejercicio, "tipoejercicio"=>$ejertipoejercicio, "niveldificultad"=>$ejerniveldificultad, "TablaEjercicios_idtabla" => $ejerTablaEjercicios_idtabla);
+        $Ejercicio = array("idejercicio"=>$pk, "nombreejercicio"=>$ejernombreejercicio, "tipoejercicio"=>$ejertipoejercicio, "niveldificultad"=>$ejerniveldificultad);
         
         return $Ejercicio;
     }
@@ -188,16 +154,7 @@ class ejercicio implements iModel {
             if ($oldtipoejercicio != $newtipoejercicio){
                 $sql = 'UPDATE Ejercicio SET tipoejercicio=\''. $newtipoejercicio . '\' WHERE idejercicio = \'' . $pk .  '\'' ;
 
-                $db->consulta($sql) or die('Error al modificar el tipoejercicio');
-            }
-					
-						$oldTablaEjercicios_idtabla = $datos['TablaEjercicios_idtabla'];
-            $newTablaEjercicios_idtabla = $objeto->TablaEjercicios_idtabla;
-		
-            if ($oldTablaEjercicios_idtabla != $newTablaEjercicios_idtabla){
-                $sql = 'UPDATE Ejercicio SET TablaEjercicios_idtabla=\''. $newTablaEjercicios_idtabla . '\' WHERE idejercicio = \'' . $pk .  '\'' ;
-
-                $db->consulta($sql) or die('Error al modificar el TablaEjercicios_idtabla');
+                $db->consulta($sql) or die('Error al modificar el tipo de ejercicio');
             }
 
             $result = true;
@@ -222,9 +179,9 @@ class ejercicio implements iModel {
         if ($objeto->exists($objeto->idejercicio) == false) 
         {
              //Inserta el Ejercicio en la tabla Ejercicio
-            $insertaEjer = "INSERT INTO Ejercicio (idejercicio, niveldificultad, nombreejercicio, tipoejercicio, anotaciones, TablaEjercicios_idtabla) 
-				VALUES ('$objeto->idejercicio','$objeto->niveldificultad','$objeto->nombreejercicio','$objeto->tipoejercicio','$objeto->anotaciones', '$objeto->TablaEjercicios_idtabla')";
-            $db->consulta($insertaEjer) or die('Error al crear el Ejercicio');
+            $insertaEjer = "INSERT INTO Ejercicio (idejercicio, niveldificultad, nombreejercicio, tipoejercicio) 
+				VALUES ('$objeto->idejercicio','$objeto->niveldificultad','$objeto->nombreejercicio','$objeto->tipoejercicio')";
+            $db->consulta($insertaEjer) or die('Error al crear el ejercicio');
             return true;
         } else return false;
         
@@ -234,7 +191,7 @@ class ejercicio implements iModel {
     //Elimina de la base de datos segun la primary key pasada
     public function eliminar($pk){
 			$db = new Database();
-			$result = $db->consulta('DELETE FROM Ejercicio WHERE idejercicio = \'' .  $pk .  '\'') or die('Error al eliminar el Ejercicio');
+			$result = $db->consulta('DELETE FROM Ejercicio WHERE idejercicio = \'' .  $pk .  '\'') or die('Error al eliminar el ejercicio');
 			$db->desconectar();
 			return result;
     }
