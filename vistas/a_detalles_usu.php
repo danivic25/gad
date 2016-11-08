@@ -58,21 +58,21 @@ Fecha: 01/11/2016
                                         <?php switch($usu['tipo']){
                                     case 'admin':
                                         ?>
-                                        <option value='admin' selected>Admin</option>
-                                        <option value='gestor'>Gestor</option>
-                                        <option value='empleado'>Empleado</option>
+                                        <option value='admin' selected>admin</option>
+                                        <option value='entrenador'>entrenador</option>
+                                        <option value='deportista'>deportista</option>
                                         <?php break;
-                                    case 'gestor':
+                                    case 'entrenador':
                                         ?>
-                                        <option value='admin'>Admin</option>
-                                        <option value='gestor' selected>Gestor</option>
-                                        <option value='empleado'>Empleado</option>
+                                        <option value='admin'>admin</option>
+                                        <option value='entrenador' selected>entrenador</option>
+                                        <option value='deportista'>deportista</option>
                                         <?php break;
                                     default:
                                         ?>
-                                        <option value='admin'>Admin</option>
-                                        <option value='gestor'>Gestor</option>
-                                        <option value='empleado' selected>Empleado</option>
+                                        <option value='admin'>admin</option>
+                                        <option value='entrenador'>entrenador</option>
+                                        <option value='deportista' selected>deportista</option>
                                         <?php } ?>
                                     </select>
                                 </td>

@@ -1,8 +1,8 @@
 <!--
 ======================================================================
 Modelo de la tabla Ejercicio
-Creado por: Edgard Ruiz Gonzalez   
-Fecha: 01/11/2016
+Creado por: Ramón Gago Carrera   
+Fecha: 08/11/2016
 ======================================================================
 -->
 <?php 
@@ -148,26 +148,13 @@ class ejercicio implements iModel {
         return $arrayEjercicio;
     }
     
-    //Devuelve un array asociativo de la tabla de la clase de los Ejercicios empleados
-    public function listarEmpleados(){
-        $db = new Database();
-        
-        $result = $db->consulta("SELECT * FROM Ejercicio WHERE TablaEjercicios_idtabla='empleado'");
-        $arrayEmpleados = array();
-        while ($row_Ejercicio = mysqli_fetch_assoc($result))
-            $arrayEmpleados[] = $row_Ejercicio;
-        
-        $db->desconectar();
-        return $arrayEmpleados;
-    }
-    
     //Muestra los datos de la $pk indicada. Devuelve una array asociativo
     public function consultar ($pk){
         //Obtener el nombreejercicio
         $ejernombreejercicio = $this->getnombreejercicio($pk);
         //Obtener el tipoejercicio
         $ejertipoejercicio = $this->gettipoejercicio($pk);
-        //Obtener contraseña
+        //Obtener niveldificultad
         $ejerniveldificultad = $this->getniveldificultad($pk);
         //Obtener TablaEjercicios_idtabla de Ejercicio
         $ejerTablaEjercicios_idtabla = $this->getTablaEjercicios_idtabla($pk);
@@ -237,7 +224,7 @@ class ejercicio implements iModel {
              //Inserta el Ejercicio en la tabla Ejercicio
             $insertaEjer = "INSERT INTO Ejercicio (idejercicio, niveldificultad, nombreejercicio, tipoejercicio, anotaciones, TablaEjercicios_idtabla) 
 				VALUES ('$objeto->idejercicio','$objeto->niveldificultad','$objeto->nombreejercicio','$objeto->tipoejercicio','$objeto->anotaciones', '$objeto->TablaEjercicios_idtabla')";
-            $db->consulta($insertaUsu) or die('Error al crear el Ejercicio');
+            $db->consulta($insertaEjer) or die('Error al crear el Ejercicio');
             return true;
         } else return false;
         

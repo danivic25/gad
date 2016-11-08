@@ -1,8 +1,8 @@
 <!--
 ===========================================================================
-Controlador para añadir nuevo usuario
-Creado por: Edgard Ruiz  Gonzalez
-Fecha: 01/11/2016
+Controlador para añadir un nuevo ejercicio
+Creado por: Ramón Gago Carrera	
+Fecha: 08/11/2016
 ============================================================================
 -->
 

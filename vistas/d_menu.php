@@ -1,6 +1,6 @@
 <!--
 ======================================================================
-Menu principal del usuario deportista, donde puede ver la lista de usuarios que puede gestionar
+Menu principal del usuario deportista, donde puede ver la lista de tablas de ejercicios que puede gestionar
 Creado por: Ramón Gago Carrera
 Fecha: 01/11/2016
 ======================================================================
@@ -10,7 +10,7 @@ Fecha: 01/11/2016
 <html>
 <?php
 include_once('../controladores/ctrl_permisos.php');
-$includeIdioma = permisos("entrenador", "../");
+$includeIdioma = permisos("deportista", "../");
 include_once $includeIdioma;
 
 include_once('../controladores/ctrl_usuario.php');
