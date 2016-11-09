@@ -20,7 +20,7 @@ $idioma["eliminar"] = "Eliminar";
 //navbar
 $idioma["navbar_cerrar_sesion"] = "Cerrar sesion";
 $idioma["gestionar_usuarios"] = "Gestionar usuarios";
-$idioma["gestionar_proyectos"] = "Gestionar proyectos";
+$idioma["gestionar_proyectos"] = "Gestionar proyectos"; /*$idioma["gestionar_ejercicios"] = "Gestionar ejercicios";*/
 $idioma["gestionar_proyectos"] = "pending tasks";
 
 
@@ -44,9 +44,6 @@ $idioma["reg_email"] = "Correo";
 $idioma["reg_valor"] = "Validar";
 
 
-
-
-
 //perfil
 $idioma["perfil"] = "- PERFIL -";
 $idioma["perfil_correo"] = "Correo";
@@ -54,14 +51,14 @@ $idioma["perfil_nombre"] = "Nombre";
 $idioma["perfil_contrasena"] = "Contrase&ntilde;a";
 
 //Borrar usuario
-$idioma["advenrtencia_borrar_usuario"] = "Advertencia";
+$idioma["advertencia_borrar_usuario"] = "Advertencia";
 $idioma["seguro_borrar_usuario"] = "¿Está seguro de que desea borrar el usuario?";
 $idioma["NO_borrar_usuario"] = "No";
 $idioma["NO_borrar_usuario"] = "Sí";
 
 //Usuario
 $idioma["nuevo_usu"] = "NUEVO USUARIO";
-$idioma["usuarios"] = "- USUARIOS -";
+$idioma["usuarios"] = "-- USUARIOS --";
 $idioma["mod_usuarios"] = "MODIFICAR USUARIO: ";
 
 
@@ -70,6 +67,31 @@ $idioma["borrar_usuario"] = "BORRAR USUARIO";
 $idioma["seguro_borrar_usuario"] = "¿Está seguro de que desea borrar el usuario?";
 
 
+/*----------------------------------------*/
+//borrarejerdel
+
+$idioma["registrar_ejercicico"] = "Registrar ejercicio";
+$idioma["reg_ejercicio"] = "Ejercicio";
+$idioma["reg_nombreejercicio"] = "Nombre";
+$idioma["reg_tipoejercicio"] = "Tipo";
+$idioma["reg_niveldificultad"] = "Nivel de dificultad";
+
+
+//Borrar ejercicio
+$idioma["advertencia_borrar_ejercicio"] = "Advertencia";
+$idioma["seguro_borrar_ejercicio"] = "¿Está seguro de que desea borrar el ejercicio?";
+$idioma["NO_borrar_ejercicio"] = "No";
+$idioma["NO_borrar_ejercicio"] = "Sí";
+
+//ejercicio
+$idioma["nuevo_ejer"] = "NUEVO EJERCICIO";
+$idioma["ejercicios"] = "-- EJERCICIOS --";
+$idioma["mod_ejercicios"] = "MODIFICAR EJERCICIO: ";
+
+
+//Borrar ejercicio
+$idioma["borrar_ejercicio"] = "BORRAR EJERCICIO";
+$idioma["seguro_borrar_ejercicio"] = "¿Está seguro de que desea borrar el ejercicio?";
 
 
 ?>

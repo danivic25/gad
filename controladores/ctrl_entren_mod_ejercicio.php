@@ -21,7 +21,7 @@ $nuevoEjer = new Ejercicio($idejercio, $nombreejercicio, $tipoejercicio, $niveld
 
 //Modificar el ejercicio
 if ($nuevoEjer->modificar($idejercicio, $nuevoEjer))
-    header('Location:../vistas/menu.php');
+    header('Location:../vistas/e_menu.php');
 else
     die("Error al modificar el ejercicio". $idejercicio);
 ?>

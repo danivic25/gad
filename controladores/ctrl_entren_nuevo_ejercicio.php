@@ -20,7 +20,7 @@ $nuevoejer = new Ejercicio($idejercicio, $nombre, $tipoejercicio, $niveldificult
 
 //Crea el ejercicio
 if ($nuevoejer->crear($nuevoejer))
-    header('Location:../vistas/menu.php');
+    header('Location:../vistas/e_menu.php');
 else
     die("Error al crear el ejercicio". $idejercicio);
 ?>

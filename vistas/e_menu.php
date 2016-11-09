@@ -1,6 +1,6 @@
 <!--
 ======================================================================
-Menu principal del usuario entrenador, donde puede ver la lista de usuarios que puede gestionar
+Menu principal del usuario entrenador, donde puede ver la lista de actividades, tablas y ejercicios que puede gestionar
 Creado por: Edgard Ruiz Gonzalez
 Fecha: 01/11/2016
 ======================================================================
@@ -25,21 +25,38 @@ include_once('../controladores/ctrl_usuario.php');
 					<div id="content">
 						<div class="inner">
 							<!--INICIO SECCIÓN-->
-									<h1 id="logo"><a><?php echo $idioma["usuarios"];?></a></h1>
+									<h1 id="logo"><a><?php echo $idioma["ejercicios"];?></a></h1>
 										<!--INICIO TABLA-->
 										<br>
 											<table class="default">
-												<tr>
-													<th width='20%'>Login</th>
-													<th width='20%'><?php echo $idioma["reg_nombre"];?></th>
-													<th width='20%'>Email</th>
-													<th width='20%'>Rol</th>
-													<th width='10%'><?php echo $idioma["editar"];?></th>
-													<th width='10%'><?php echo $idioma["eliminar"];?></th>
-												</tr>
+													<!-- Listar Ejercicios -->
+													<?php 
+													foreach ($arrayEjercicio as $ejer)  {
+													?>
+													<tr>
+														<td width='20%'> <?php echo $ejer['idejercicio'] ?> </td>
+														<td width='20%'> <?php echo $ejer['nombreejercicio'] ?> </td>
+														<td width='20%'> <?php echo $ejer['tipoejercicio'] ?> </td>
+														<td width='20%'> <?php echo $ejer['niveldificultad'] ?> </td>
+														<td width='10%'><a class="icon-edit" href="e_detalles_ejer.php?ejer=<?php echo $ejer['idejercicio']?>"> <div class='glyphicon glyphicon-edit'> </div></a></td>
+														<td width='10%'><a class="icon-trash" href="e_menu_del.php?usu=<?php echo $ejer['idejercicio']?>"> <div class='glyphicon glyphicon-trash'> </div></a></td>
+													</tr>
+													<?php
+													}
+													?>
 												</table>
-												<table class="default">
-													<!-- Listar Actividades -->
+												<!-- Boton crear ejercicio-->
+												<table class='alternative'>
+													<tr>
+														<td width='25%'></td>
+														<td width='15%' colspan='4'><div class='button'><a href="e_nuevo_ejer.php" class="boton"><?php echo $idioma['e_nuevo_ejer'];?></a></div></td>
+														<td width='25%'></td>
+													</tr>
+												</table>
+												<!--
+										<br>
+											<table class="default">
+													<!-- Listar Actividades --><!--
 													<?php 
 													foreach ($arrayActividades as $act)  {
 													?>
@@ -57,15 +74,15 @@ include_once('../controladores/ctrl_usuario.php');
 													<?php
 													}
 													?>
-												</table>
-												<!-- Boton crear actividad -->
+												</table>-->
+												<!-- Boton crear actividad --><!--
 												<table class='alternative'>
 													<tr>
 														<td width='25%'></td>
 														<td width='15%' colspan='4'><div class='button'><a href="e_nuevo_act.php" class="boton"><?php echo $idioma['e_nuevo_act'];?></a></div></td>
 														<td width='25%'></td>
 													</tr>
-												</table>
+												</table>-->
 										<!-- FIN TABLA -->
 							</div>
 						</div>

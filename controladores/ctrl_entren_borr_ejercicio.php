@@ -16,7 +16,7 @@ $ejer = new Ejercicio();
 
 //Borrar el ejercicio
 if ($ejer->eliminar($idejercicio))
-    header('Location:../vistas/menu.php');
+    header('Location:../vistas/e_menu.php');
 else
     die("Error al borrar ejercicio" . $idejercicio);
 

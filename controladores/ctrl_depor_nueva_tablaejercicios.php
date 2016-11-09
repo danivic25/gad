@@ -20,7 +20,7 @@ $nuevatab = new TablaEjercicios($idtabla, $nombretabla, $tipotabla, $niveldificu
 
 //Crea la tabla
 if ($nuevatab->crear($nuevatab))
-    header('Location:../vistas/menu.php');
+    header('Location:../vistas/d_menu.php');
 else
     die("Error al crear la tabla". $idtabla);
 ?>

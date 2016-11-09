@@ -12,7 +12,7 @@ switch ($_SESSION['tipo'])
 	case 'admin':
 		?>
 		<div id="sidebarAdmin"> 
-			<h1 id='header'><a href='menu.php'>Gimnasio</a></h1>		
+			<h1 id='header'><a href='menu.php'>GAD</a></h1>		
       <nav id='nav'> 
         <ul>
 					<div align='center'>
@@ -35,7 +35,7 @@ switch ($_SESSION['tipo'])
 	case 'gestor':
 		?>
 		<div id="sidebarAdmin"> 
-			<h1 id='header'><a href='g_menu.php'>GestPro</a></h1>		
+			<h1 id='header'><a href='e_menu.php'>GAD</a></h1>		
       <nav id='nav'> 
         <ul>
           <div align='center'>
@@ -59,7 +59,7 @@ switch ($_SESSION['tipo'])
 	default:
 		?>
 		<div id="sidebarAdmin"> 
-			<h1 id='header'><a href='menu.php'>GestPro</a></h1>		
+			<h1 id='header'><a href='d_menu.php'>GAD</a></h1>		
       <nav id='nav'> 
         <ul>
           <div align='center'>

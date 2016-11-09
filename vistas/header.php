@@ -10,7 +10,7 @@ Fecha: 01/11/2016
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" user-scalable="no"> <!-- Mobile first -->
 
-	<title>GestPro</title> <!-- Titulo de la pestaña -->
+	<title>GAD</title> <!-- Titulo de la pestaña -->
 	<link rel="shortcut icon" href="../img/gesTor_icon.png"/> <!-- Icono de la pestaña -->
 
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />

@@ -1,10 +1,10 @@
 <?php
 
-/*===========================================================================
-Clase de la base de datos, establece la conexion con la base de datos DB_ET1_G5 usando MySQL improved (mysqli)
+/*===========================================================================================================
+Clase de la base de datos, establece la conexion con la base de datos gimnasio usando MySQL improved (mysqli)
 Creado por: Edgard Ruiz Gonzalez   
 Fecha: 01/11/2016
-============================================================================
+=============================================================================================================
 */
 
 class Database {

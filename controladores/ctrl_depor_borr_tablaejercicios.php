@@ -16,7 +16,7 @@ $tab = new TablaEjercicios();
 
 //Borrar la tabla de ejercicios
 if ($tab->eliminar($idtabla))
-    header('Location:../vistas/menu.php');
+    header('Location:../vistas/d_menu.php');
 else
     die("Error al borrar tabla" . $idtabla);
 

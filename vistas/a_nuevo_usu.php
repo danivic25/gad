@@ -54,8 +54,8 @@ Fecha: 01/11/2016
 															 <select name='tipo' required>
 																 	<option value='admin' selected>--</option>
 																 	<option value='admin'>Admin</option>
-																	<option value='gestor'>Gestor</option>
-																	<option value='empleado'>Empleado</option>
+																	<option value='gestor'>Entrenador</option>
+																	<option value='empleado'>Deportista</option>
 																</select>
                             </td>
 														</tr>

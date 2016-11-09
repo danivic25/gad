@@ -20,7 +20,7 @@ $nuevatab = new TablaEjercicios($idtabla, $nombretabla, $tipotabla, $niveldificu
 
 //Modificar la tabla de ejercicios
 if ($nuevatab->modificar($idtabla, $nuevatab))
-    header('Location:../vistas/menu.php');
+    header('Location:../vistas/d_menu.php');
 else
     die("Error al modificar la tabla de ejercicios". $idtabla);
 ?>

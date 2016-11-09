@@ -1,6 +1,6 @@
 <!--
 ======================================================================
-Modelo de la tabla Usuario
+Modelo de la tabla Axtividad
 Creado por: Daniel Victor Lopez Gonzalez
 Fecha: 07/11/2016
 ======================================================================
@@ -16,23 +16,23 @@ class Actividad implements iModel {
     private $horafin;
     private $responsable;
     private $tipoactividad;
-		private $numplazasmax;
-		private $idsesion;
-		private $usuario_dni;
-		private $entrenador_dni;
+	private $numplazasmax;
+	private $idsesion;
+	private $usuario_dni;
+	private $entrenador_dni;
 
     public function __construct($idactividad="" , $nombreactividad="", $horainicio="" , $horafin="" , $responsable="",
 		$tipoactividad="", $numplazasmax="", $idsesion="", $usuario_dni="", $entrenador_dni="") {
 
-				$this->idactividad = $idactividad;
+		$this->idactividad = $idactividad;
         $this->nombreactividad = $nombreactividad;
         $this->horainicio = $horainicio;
         $this->horafin = $horafin;
         $this->responsable = $responsable;
         $this->tipoactividad = $tipoactividad;
-				$this->numplazasmax = $numplazasmax;
-				$this->idsesion = $idsesion;
-				$this->entrenador_dni = $entrenador_dni;
+		$this->numplazasmax = $numplazasmax;
+		$this->idsesion = $idsesion;
+		$this->entrenador_dni = $entrenador_dni;
     }
 
 		/*-------------------------- GET DE CADA ATRIBUTO ----------------------------------------*/

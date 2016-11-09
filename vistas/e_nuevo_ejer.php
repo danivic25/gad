@@ -10,10 +10,10 @@ Fecha: 08/11/2016
 <html>
 	<?php
 	include_once('../controladores/ctrl_permisos.php');
-	$includeIdioma = permisos("deportista", "../");
+	$includeIdioma = permisos("entrenador", "../");
 	include_once $includeIdioma;
 
-	include_once('../controladores/ctrl_usuario.php');
+	include_once('../controladores/ctrl_ejercicio.php');
 	//Obtiene el nombre del ejercicio a modificar de la URL
 	if(isset($_GET['ejer'])){
 			$ejercicio = $_GET['ejer'];
@@ -35,26 +35,22 @@ Fecha: 08/11/2016
 									<header><h1 id="logo"><a>- <?php echo $idioma['nuevo_ejer'];?> -</a></h1></header>
 										<!--INICIO TABLA-->
 										<br>
-										<form action='../controladores/ctrl_depor_nuevo_ejercicio.php' name="dnuevoejer" method='post'>
+										<form action='../controladores/ctrl_entren_nuevo_ejercicio.php' name="enuevoejer" method='post'>
 													<table class='default'> 
 														<tr> 
 																<td>Idejercicio:</td> 
 																<td><input type='text' class='text' name="idejercicio" required>
 														<tr>
-															<td><?php echo $idioma['perfil_tipoejercicio']; ?></td>
+															<td><?php echo $idioma['reg_tipoejercicio']; ?></td>
 															<td><input type='email' class='text' name='tipoejercicio' required></td>	
 														</tr>
 														<tr>
-															<td><?php echo $idioma['perfil_idejercicio']; ?></td>
+															<td><?php echo $idioma['reg_idejercicio']; ?></td>
 																<td><input type='text' class='text' name='idejercicio' required></td>
 														</tr>
 														<tr>
-															<td><?php echo $idioma['perfil_niveldificultad']; ?></td>
+															<td><?php echo $idioma['reg_niveldificultad']; ?></td>
 															<td><input type='niveldificultad' name='niveldificultad' id='niveldificultad' required></td>						
-														</tr>
-														<tr>
-															<td><?php echo $idioma['perfil_anotaciones']; ?></td>
-															<td><input type='anotaciones' name='anotaciones' id='anotaciones' required></td>						
 														</tr>
 													</table>
 												</form>

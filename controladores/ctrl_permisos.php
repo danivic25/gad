@@ -40,7 +40,7 @@ function permisos ($tipo, $ruta){
 				$includeIdioma = $ruta."modelo/esp.php";	
 				return $includeIdioma;
 			}
-			/*Si el usuario tiene definido un idioma, cambia el idioma de la pagina, devolviendo la direccion del arvicho a importar*/
+			/*Si el usuario tiene definido un idioma, cambia el idioma de la pagina, devolviendo la direccion del archivo a importar*/
 			else{
 				$includeIdioma = $ruta."modelo/".$_SESSION['idioma'].".php";	
 				return $includeIdioma;
