@@ -14,6 +14,6 @@ Fecha: 01/11/2016
     //Array asociativo de la tabla Usuario
     $arrayUsuarios = $usuarios->listar();
 
-    //Array asociativo de los empleados de la BD, usador por el gestor en g_nuevo_e.php
-    $empleados = $usuarios->listarEmpleados();
+    //Array asociativo de los deportistas de la BD, usador por el entrenador en a_nuevo_usu.php
+    $deportistas = $usuarios->listarDeportistas();
 ?>

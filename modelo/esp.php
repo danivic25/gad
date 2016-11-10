@@ -20,8 +20,8 @@ $idioma["eliminar"] = "Eliminar";
 //navbar
 $idioma["navbar_cerrar_sesion"] = "Cerrar sesion";
 $idioma["gestionar_usuarios"] = "Gestionar usuarios";
-$idioma["gestionar_proyectos"] = "Gestionar proyectos"; /*$idioma["gestionar_ejercicios"] = "Gestionar ejercicios";*/
-$idioma["gestionar_proyectos"] = "pending tasks";
+$idioma["gestionar_ejercicios"] = "Gestionar ejercicios"; 
+$idioma["gestionar_tablasejercicios"] = "Gestionar tablas";
 
 
 
@@ -70,7 +70,7 @@ $idioma["seguro_borrar_usuario"] = "¿Está seguro de que desea borrar el usuari
 /*----------------------------------------*/
 //borrarejerdel
 
-$idioma["registrar_ejercicico"] = "Registrar ejercicio";
+$idioma["registrar_ejercicio"] = "Registrar ejercicio";
 $idioma["reg_ejercicio"] = "Ejercicio";
 $idioma["reg_nombreejercicio"] = "Nombre";
 $idioma["reg_tipoejercicio"] = "Tipo";
@@ -89,7 +89,6 @@ $idioma["ejercicios"] = "-- EJERCICIOS --";
 $idioma["mod_ejercicios"] = "MODIFICAR EJERCICIO: ";
 
 
-//Borrar ejercicio
 $idioma["borrar_ejercicio"] = "BORRAR EJERCICIO";
 $idioma["seguro_borrar_ejercicio"] = "¿Está seguro de que desea borrar el ejercicio?";
 

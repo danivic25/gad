@@ -63,43 +63,12 @@ if (Numero % 1 == 0) {
 		return false;
 }
 
-function Validar_CodigoPostal()
-{
-	var codigoPostal = document.getElementById("Campo_CodigoPostal").value;
-	if (isNaN(codigoPostal) == true){
-        alert ("|ERROR| Valor: " + "'" + codigoPostal +"'" + " debe ser numerico");
-		return false;
-    }
-	else
-	{
-		if (Validar_Entero(codigoPostal)){
-			if(codigoPostal.length == 0 | codigoPostal.length == 5)
-			{
-				if(confirm("¿Modificar datos?")) {
-					MD5_Pass();
-					return true;
-				}		
-				else
-				{
-				return false;
-				}
-			
-			}
-			else 
-			{
-				alert("|ERROR| El formato del codigo postal no es correcto");
-				return false;
-			}
-				return false;
-		}
-	}
-}
 
-function Confirmar_EliminacionProyecto()
+function Confirmar_EliminacionSesionEntrenamiento()
 {
-	if(confirm("¿Eliminar Proyecto?"))
+	if(confirm("¿Eliminar sesion de entrenamiento?"))
 	{
-		alert("Proyecto Eliminado");
+		alert("Sesion de entrenamiento eliminada");
 		return true;
 	}		
 	else
@@ -108,11 +77,11 @@ function Confirmar_EliminacionProyecto()
 	}
 }
 
-function Confirmar_EliminacionTarea()
+function Confirmar_EliminacionActividad()
 {
-	if(confirm("¿Eliminar Tarea?"))
+	if(confirm("¿Eliminar Actividad?"))
 	{
-		alert("Tarea Eliminado");
+		alert("Actividad eliminada");
 		return true;
 	}		
 	else
@@ -121,12 +90,12 @@ function Confirmar_EliminacionTarea()
 	}
 }
 
-function Validar_EstadoTarea()
+function Validar_EstadoActividad()
 {
-	var estadoTarea=document.getElementById("Estado_Tarea").value;
-	if( estadoTarea == "Finalizada" )
+	var estadoActividad=document.getElementById("Estado_Actividad").value;
+	if( estadoActividad == "Finalizada" )
 	{
-		alert("|ERROR| Tarea finalizada");
+		alert("|ERROR| Actividad finalizada");
 		return false;
 	}
 	else

@@ -12,5 +12,5 @@ Fecha: 08/11/2016
     $ejercicio = new Ejercicio();
     
     //Array asociativo de las tablas de ejercicios
-    $arrayEjercicio = $Ejercicio->listar();
+    $arrayEjercicio = $ejercicio->listar();
 ?>

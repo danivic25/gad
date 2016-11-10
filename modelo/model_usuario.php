@@ -155,17 +155,30 @@ class Usuario implements iModel {
         return $arrayUsuario;
     }
     
-    //Devuelve un array asociativo de la tabla de la clase de los usuarios empleados
-    public function listarEmpleados(){
+    //Devuelve un array asociativo de la tabla de la clase de los usuarios deportistas
+    public function listarDeportistas(){
         $db = new Database();
         
-        $result = $db->consulta("SELECT * FROM Usuario WHERE tipousuario='empleado'");
-        $arrayEmpleados = array();
+        $result = $db->consulta("SELECT * FROM Usuario WHERE tipousuario='deportista'");
+        $arrayDeportistas = array();
         while ($row_usuario = mysqli_fetch_assoc($result))
-            $arrayEmpleados[] = $row_usuario;
+            $arrayDeportistas[] = $row_usuario;
         
         $db->desconectar();
-        return $arrayEmpleados;
+        return $arrayDeportistas;
+    }
+
+    //Devuelve un array asociativo de la tabla de la clase de los usuarios entrenador
+    public function listarEntrenadores(){
+        $db = new Database();
+        
+        $result = $db->consulta("SELECT * FROM Usuario WHERE tipousuario='Entrenador'");
+        $arrayEntrenadores = array();
+        while ($row_usuario = mysqli_fetch_assoc($result))
+            $arrayEntrenadores[] = $row_usuario;
+        
+        $db->desconectar();
+        return $arrayEntrenadores;
     }
     
     //Muestra los datos de la $pk indicada. Devuelve una array asociativo

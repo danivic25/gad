@@ -19,8 +19,8 @@ $idioma["eliminar"] = "Delete";
 //navbar
 $idioma["navbar_cerrar_sesion"] = "Logout";
 $idioma["gestionar_usuarios"] = "Manage users";
-$idioma["gestionar_proyectos"] = "Manage projects";
-$idioma["gestionar_proyectos"] = "pending tasks";
+$idioma["gestionar_ejercicios"] = "Manage exercises";
+$idioma["gestionar_tablasejercicios"] = "Manage exercise tables";
 
 
 

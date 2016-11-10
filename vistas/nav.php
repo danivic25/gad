@@ -32,7 +32,7 @@ switch ($_SESSION['tipo'])
 		</div>
 		<?php break;
 		
-	case 'gestor':
+	case 'entrenador':
 		?>
 		<div id="sidebarAdmin"> 
 			<h1 id='header'><a href='e_menu.php'>GAD</a></h1>		
@@ -40,7 +40,7 @@ switch ($_SESSION['tipo'])
         <ul>
           <div align='center'>
             <li class='current'><strong><a href="perfil.php?usu=<?php echo $_SESSION['login_usuario']?>"><img src="../img/avatar.png"><br><?php echo $_SESSION['login_usuario'] ?></a></strong></li>
-						<li class='current'><a href="g_menu.php"><?php echo $idioma["gestionar_proyectos"];?></a></li>
+						<li class='current'><a href="e_menu.php"><?php echo $idioma["gestionar_ejercicios"];?></a></li>
 						<li class='current'><a href="../controladores/ctrl_log_out.php" id='Logout_Usuario' onclick ='return Salir_Usuario()'>Log Out</a></li>
 						<!-- Iconos de idioma -->
 						<div class="col-sm-6 col-md-6">
@@ -64,7 +64,7 @@ switch ($_SESSION['tipo'])
         <ul>
           <div align='center'>
              <li class='current'><strong><a href="perfil.php?usu=<?php echo $_SESSION['login_usuario']?>"><img src="../img/avatar.png"><br><?php echo $_SESSION['login_usuario'] ?></a></strong></li>
-							<li class='current'><a href="e_menu.php"><?php echo $idioma["tareas_pendientes"];?></a></li>
+							<li class='current'><a href="d_menu.php"><?php echo $idioma["gestionar tablasejercicios"];?></a></li>
 							<li class='current'><a href="../controladores/ctrl_log_out.php" id='Logout_Usuario' onclick ='return Salir_Usuario()'>Log Out</a></li>
 						<!-- Iconos de idioma -->
 						<div class="col-sm-6 col-md-6">

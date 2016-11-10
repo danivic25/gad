@@ -82,9 +82,7 @@ class ejercicio implements iModel {
             $db->desconectar();
 
             return $resultado;
-        }else return true;
-    }
-    
+        }
     
     //Comprueba si existe
     public function exists ($pk) {

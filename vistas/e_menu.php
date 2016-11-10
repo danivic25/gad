@@ -13,7 +13,7 @@ include_once('../controladores/ctrl_permisos.php');
 $includeIdioma = permisos("entrenador", "../");
 include_once $includeIdioma;
 
-include_once('../controladores/ctrl_usuario.php');
+include_once('../controladores/ctrl_ejercicio.php');
 ?>
 
 	<body class="left-sidebar">
@@ -49,7 +49,7 @@ include_once('../controladores/ctrl_usuario.php');
 												<table class='alternative'>
 													<tr>
 														<td width='25%'></td>
-														<td width='15%' colspan='4'><div class='button'><a href="e_nuevo_ejer.php" class="boton"><?php echo $idioma['e_nuevo_ejer'];?></a></div></td>
+														<td width='15%' colspan='4'><div class='button'><a href="e_nuevo_ejer.php" class="boton"><?php echo $idioma['nuevo_ejer'];?></a></div></td>
 														<td width='25%'></td>
 													</tr>
 												</table>
