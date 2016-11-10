@@ -37,6 +37,7 @@ Fecha: 08/11/2016
 										<br>
 										<form action='../controladores/ctrl_entren_nuevo_ejercicio.php' name="enuevoejer" method='post'>
 													<table class='default'> 
+														<tr>
 														<td><?php echo $idioma['reg_nombreejercicio']; ?></td>
 														<td><input type='text' class='text' name='nombreejercicio' required></td>
 														</tr>
@@ -57,6 +58,10 @@ Fecha: 08/11/2016
 																	<option value='medio'>medio</option>
 																	<option value='alto'>alto</option>
 																</select></td>						
+														</tr>
+														<tr>
+														<td><?php echo $idioma['reg_descripcionejercicio']; ?></td>
+														<td><input type='text' class='text' name='descripcionejercicio' required></td>
 														</tr>
 														<table class='alternative'>
 														<tr>

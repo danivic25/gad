@@ -39,12 +39,12 @@ Fecha: 09/11/2016
                         <table class='default'>
                             <tr> 
                                 <td><?php echo $idioma["reg_ejercicio"]; ?></td> 
-                                <td><input type='text' disabled class='text' value="<?php echo $ejer['idejercicicio']; ?>" / name='idejercicio'></td>
-                                <input type='hidden' value="<?php echo $ejer['idejercicicio']; ?>" / name='idejercicicio'>
+                                <td><input type='text' disabled class='text' value="<?php echo $ejer['idejercicio']; ?>" / name='idejercicio'></td>
+                                <input type='hidden' value="<?php echo $ejer['idejercicio']; ?>" / name='idejercicio'>
                             </tr>
                             <tr>
                                 <td><?php echo $idioma["reg_nombreejercicio"];?></td>
-                                <td><input type='email' class='text' value="<?php echo $ejer['nombreejercicio']; ?>" / name='nombreejercicio' required></td>	
+                                <td><input type='text' class='text' value="<?php echo $ejer['nombreejercicio']; ?>" / name='nombreejercicio' required></td>	
                             </tr>
                             <tr>
                                 <td><?php echo $idioma["reg_tipoejercicio"]; ?></td>
@@ -53,6 +53,10 @@ Fecha: 09/11/2016
                             <tr>
                                 <td><?php echo $idioma["reg_niveldificultad"]; ?></td>
                                 <td><input type='text' class='text' value="<?php echo $ejer['niveldificultad']; ?>"/ name='niveldificultad' required></td>
+                            </tr>
+                            <tr>
+                                <td><?php echo $idioma["reg_descripcionejercicio"]; ?></td>
+                                <td><input type='text' disabled value="<?php echo $ejer['descripcionejercicio']; ?>"></td>
                             </tr>
                         </table>
                         <table class='alternative'>
