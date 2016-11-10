@@ -55,6 +55,10 @@ Fecha: 09/11/2016
                                 <td><?php echo $idioma["reg_niveldificultad"]; ?></td>
                                 <td><input type='text' disabled value="<?php echo $ejer['niveldificultad']; ?>"></td>
                             </tr>
+                            <tr>
+                                <td><?php echo $idioma["reg_descripcionejercicio"]; ?></td>
+                                <td><input type='text' disabled value="<?php echo $ejer['descripcionejercicio']; ?>"></td>
+                            </tr>
                         </table>
                         <table class='alternative'>
                             <tr>

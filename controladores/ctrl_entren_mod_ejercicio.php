@@ -14,10 +14,10 @@ $idejercicio; = $_POST['$idejercicio'];
 $nombreejercicio = $_POST['nombreejercicio'];
 $tipoejercicio = $_POST['tipoejercicio'];
 $niveldificultad = $_POST['niveldificultad'];
-$anotaciones = $_POST['anotaciones'];
+$descripcionejercicio = $_POST['descripcionejercicio'];
 
 
-$nuevoEjer = new Ejercicio($idejercio, $nombreejercicio, $tipoejercicio, $niveldificultad, $anotaciones);
+$nuevoEjer = new Ejercicio($idejercio, $nombreejercicio, $tipoejercicio, $niveldificultad, $descripcionejercicio);
 
 //Modificar el ejercicio
 if ($nuevoEjer->modificar($idejercicio, $nuevoEjer))

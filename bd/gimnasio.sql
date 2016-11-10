@@ -117,6 +117,7 @@ CREATE TABLE IF NOT EXISTS `gimnasio`.`Ejercicio` (
   `nombreejercicio` VARCHAR(45) NULL,
   `tipoejercicio` VARCHAR(45) NULL,
   `niveldificultad` INT NULL,
+  `descripcionejercicio` VARCHAR(200) NULL,
   PRIMARY KEY (`idejercicio`))
 ENGINE = InnoDB;
 

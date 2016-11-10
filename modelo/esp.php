@@ -75,6 +75,7 @@ $idioma["reg_ejercicio"] = "Ejercicio";
 $idioma["reg_nombreejercicio"] = "Nombre";
 $idioma["reg_tipoejercicio"] = "Tipo";
 $idioma["reg_niveldificultad"] = "Nivel de dificultad";
+$idioma["reg_descripcionejercicio"] = "Descripcion";
 
 
 //Borrar ejercicio

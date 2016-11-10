@@ -1,8 +1,8 @@
 <!--
 ======================================================================
 Menu principal del usuario entrenador, donde puede ver la lista de actividades, tablas y ejercicios que puede gestionar
-Creado por: Edgard Ruiz Gonzalez
-Fecha: 01/11/2016
+Creado por: Ramón Gago Carrera
+Fecha: 10/11/2016
 ======================================================================
 -->
 
@@ -34,12 +34,13 @@ include_once('../controladores/ctrl_ejercicio.php');
 													foreach ($arrayEjercicio as $ejer)  {
 													?>
 													<tr>
-														<td width='20%'> <?php echo $ejer['idejercicio'] ?> </td>
-														<td width='20%'> <?php echo $ejer['nombreejercicio'] ?> </td>
-														<td width='20%'> <?php echo $ejer['tipoejercicio'] ?> </td>
-														<td width='20%'> <?php echo $ejer['niveldificultad'] ?> </td>
-														<td width='10%'><a class="icon-edit" href="e_detalles_ejer.php?ejer=<?php echo $ejer['idejercicio']?>"> <div class='glyphicon glyphicon-edit'> </div></a></td>
-														<td width='10%'><a class="icon-trash" href="e_menu_del.php?usu=<?php echo $ejer['idejercicio']?>"> <div class='glyphicon glyphicon-trash'> </div></a></td>
+														<td width='15%'> <?php echo $ejer['idejercicio'] ?> </td>
+														<td width='15%'> <?php echo $ejer['nombreejercicio'] ?> </td>
+														<td width='15%'> <?php echo $ejer['tipoejercicio'] ?> </td>
+														<td width='15%'> <?php echo $ejer['niveldificultad'] ?> </td>
+														<td width='15%'> <?php echo $ejer['descripcionejercicio'] ?> </td>
+														<td width='12%'><a class="icon-edit" href="e_detalles_ejer.php?ejer=<?php echo $ejer['idejercicio']?>"> <div class='glyphicon glyphicon-edit'> </div></a></td>
+														<td width='12%'><a class="icon-trash" href="e_menu_del.php?usu=<?php echo $ejer['idejercicio']?>"> <div class='glyphicon glyphicon-trash'> </div></a></td>
 													</tr>
 													<?php
 													}

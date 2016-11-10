@@ -14,12 +14,14 @@ class ejercicio implements iModel {
     private $nombreejercicio;
     private $tipoejercicio;
     private $niveldificultad;
+    private $descripcionejercicio;
     
-    public function __construct($idejercicio="" , $nombreejercicio="", $tipoejercicio="" , $niveldificultad="") {
+    public function __construct($idejercicio="" , $nombreejercicio="", $tipoejercicio="" , $niveldificultad="",$descripcionejercicio="") {
         $this->idejercicio = $idejercicio;
         $this->nombreejercicio = $nombreejercicio;
         $this->tipoejercicio = $tipoejercicio;
         $this->niveldificultad = $niveldificultad;
+        $this->descripcionejercicio = $descripcionejercicio;
     }
     
     private function getnombreejercicio ($pk){
@@ -73,6 +75,23 @@ class ejercicio implements iModel {
         return $dificultad;
     }
 
+    public function getdescripcionejercicio ($pk){
+        $db = new Database();
+        
+        $query = 'SELECT descripcionejercicio FROM Ejercicio WHERE idejercicio = \'' . $pk .  '\'';
+        $result = $db->consulta($query);
+
+        /* array numérico */
+        $row = $result->fetch_array(MYSQLI_NUM);
+        $descripcion = $row[0];
+
+        /* liberar la serie de resultados */
+        $result->free();
+        $db->desconectar();
+        
+        return $descripcion;
+    }
+
         //Este metodo se llama cada vez que se cambia el nivel de dificultad en la navBar lateral
         //Devuelve true si se realizo correctamente el cambio de nivel de dificultad
     private function setniveldificultad($newniveldificultad, $pk){
@@ -123,8 +142,10 @@ class ejercicio implements iModel {
         $ejertipoejercicio = $this->gettipoejercicio($pk);
         //Obtener niveldificultad
         $ejerniveldificultad = $this->getniveldificultad($pk);
+        //Obtener descripcionejercicio
+        $ejerdescripcionejercicio = $this->getdescripcicionejercicio($pk);
         //Crear array asoc con los datos de $pk
-        $Ejercicio = array("idejercicio"=>$pk, "nombreejercicio"=>$ejernombreejercicio, "tipoejercicio"=>$ejertipoejercicio, "niveldificultad"=>$ejerniveldificultad);
+        $Ejercicio = array("idejercicio"=>$pk, "nombreejercicio"=>$ejernombreejercicio, "tipoejercicio"=>$ejertipoejercicio, "niveldificultad"=>$ejerniveldificultad, "descripcionejercicio"=>$ejerdescripcionejercicio);
         
         return $Ejercicio;
     }
@@ -162,6 +183,15 @@ class ejercicio implements iModel {
             if (($oldniveldificultad != $newniveldificultad) && ($newniveldificultad != "bajo")){
                  $result = $this->setniveldificultad($oldniveldificultad, $newniveldificultad, $pk);
             }
+
+            $olddescripcionejercicio = $datos['descripcionejercicio'];
+            $newdescripcionejercicio = $objeto->descripcionejercicio;
+        
+            if ($olddescripcionejercicio != $newdescripcionejercicio){
+                $sql = 'UPDATE Ejercicio SET descripcionejercicio=\''. $newdescripcionejercicio . '\' WHERE idejercicio = \'' . $pk .  '\'' ;
+
+                $db->consulta($sql) or die('Error al modificar la descripcion del ejercicio');
+            }
         
             $db->desconectar();
             return $result;
@@ -177,8 +207,8 @@ class ejercicio implements iModel {
         if ($objeto->exists($objeto->idejercicio) == false) 
         {
              //Inserta el Ejercicio en la tabla Ejercicio
-            $insertaEjer = "INSERT INTO Ejercicio (idejercicio, niveldificultad, nombreejercicio, tipoejercicio) 
-				VALUES ('$objeto->idejercicio','$objeto->niveldificultad','$objeto->nombreejercicio','$objeto->tipoejercicio')";
+            $insertaEjer = "INSERT INTO Ejercicio (idejercicio, nombreejercicio, tipoejercicio, niveldificultad, descripcion) 
+				VALUES ('$objeto->idejercicio','$objeto->nombreejercicio', '$objeto->tipoejercicio','$objeto->niveldificultad', '$objeto->descripcionejercicio')";
             $db->consulta($insertaEjer) or die('Error al crear el ejercicio');
             return true;
         } else return false;

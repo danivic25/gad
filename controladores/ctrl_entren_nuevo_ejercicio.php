@@ -14,9 +14,9 @@ $idejercicio = $_POST['idejercicio'];
 $nombre = $_POST['nombre'];
 $tipoejercicio = $_POST['tipoejercicio'];
 $niveldificultad = $_POST['niveldificultad'];
-$anotacion = $_POST['anotacion'];
+$descripcionejercicio = $_POST['descripcionejercicio'];
 
-$nuevoejer = new Ejercicio($idejercicio, $nombre, $tipoejercicio, $niveldificultad, $anotacion);
+$nuevoejer = new Ejercicio($idejercicio, $nombre, $tipoejercicio, $niveldificultad, $descripcionejercicio);
 
 //Crea el ejercicio
 if ($nuevoejer->crear($nuevoejer))
