@@ -26,7 +26,7 @@ $idioma["gestionar_tablasejercicios"] = "Manage exercise tables";
 
 //login
 $idioma["login_titulo"] = "Login";
-$idioma["intro_login_pass"] = "Input your login and password"; 
+$idioma["intro_login_pass"] = "Input your login and password";
 $idioma["usuario_login"] = "User";
 $idioma["pass_login"] = "Password";
 $idioma["valor_login"] = "Accept";
@@ -87,6 +87,24 @@ $idioma["borrar_ejercicio"] = "DELETE EXERCISE";
 $idioma["seguro_borrar_ejercicio"] = "Are you sure you want to remove this exercise?";
 
 
+//Tablas ejercicios
+$idioma["tabla"] = "--TABLES OF EXERCISES--"
+$idioma["idtabla"] = "Id table"
+$idioma["nombretabla"] = "Name of the table"
+$idioma["tipotabla"] = "Tipo de tabla"
+$idioma["niveldificultadglobal"] = "Global level of difficulty"
+$idioma["responsable"] = "Responsable"
 
+$idioma["nueva_tabla"] = "New table"
+$idioma["mod_tabla"] = "MODIFY TABLE"
+
+$idioma["reg_tipotabla"] = "Type";
+$idioma["reg_nombretabla"] = "Name";
+$idioma["reg_tabla"] = "Table";
+$idioma["reg_niveldificultadglobal"] = "Global level of difficulty";
+$idioma["reg_responsable"] = "Responsable";
+
+$idioma["borrar_tabla"] = "DELETE TABLA";
+$idioma["seguro_borrar_tabla"] = "Are you sure you want to remove this table?";
 
 ?>

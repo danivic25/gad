@@ -20,14 +20,14 @@ $idioma["eliminar"] = "Eliminar";
 //navbar
 $idioma["navbar_cerrar_sesion"] = "Cerrar sesion";
 $idioma["gestionar_usuarios"] = "Gestionar usuarios";
-$idioma["gestionar_ejercicios"] = "Gestionar ejercicios"; 
+$idioma["gestionar_ejercicios"] = "Gestionar ejercicios";
 $idioma["gestionar_tablasejercicios"] = "Gestionar tablas";
 
 
 
 //login
 $idioma["login_titulo"] = "Autenticación";
-$idioma["intro_login_pass"] = "Introduce tu login y tu contraseña"; 
+$idioma["intro_login_pass"] = "Introduce tu login y tu contraseña";
 $idioma["usuario_login"] = "Usuario";
 $idioma["pass_login"] = "Contraseña";
 $idioma["valor_login"] = "Aceptar";
@@ -92,6 +92,29 @@ $idioma["mod_ejercicios"] = "MODIFICAR EJERCICIO: ";
 
 $idioma["borrar_ejercicio"] = "BORRAR EJERCICIO";
 $idioma["seguro_borrar_ejercicio"] = "¿Está seguro de que desea borrar el ejercicio?";
+
+
+
+//Tablas ejercicios
+$idioma["tabla"] = "--TABLAS DE EJERCICIOS--"
+$idioma["idtabla"] = "Id tabla"
+$idioma["nombretabla"] = "Nombre de la tabla"
+$idioma["tipotabla"] = "Tipo de tabla"
+$idioma["niveldificultadglobal"] = "Nivel de dificultad global"
+$idioma["responsable"] = "Responsable"
+
+
+$idioma["nueva_tabla"] = "Nueva tabla"
+$idioma["mod_tabla"] = "MODIFICAR TABLA"
+
+$idioma["reg_tabla"] = "Tabla";
+$idioma["reg_nombretabla"] = "Nombre";
+$idioma["reg_tipotabla"] = "Tipo";
+$idioma["reg_niveldificultadglobal"] = "Nivel de dificultad global";
+$idioma["reg_responsable"] = "Responsable";
+
+$idioma["borrar_tabla"] = "BORRAR TABLA";
+$idioma["seguro_borrar_tabla"] = "¿Está seguro de que desea borrar la tabla?";
 
 
 ?>
