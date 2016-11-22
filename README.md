@@ -1,5 +1,5 @@
 #GAD
-Tu Gestor de Actividades Deportivas
+
 <img class="img-logo" src="img/gad.png" alt="logo"/></br>
 
 <strong> GAD </strong></br>
